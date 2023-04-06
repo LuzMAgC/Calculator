@@ -7,4 +7,4 @@ class Calculator:
         return self.number
 
     def add_number(self, number: int) -> None:
-        self.number = number
+        self.number = int(f"{self.number}{number}")

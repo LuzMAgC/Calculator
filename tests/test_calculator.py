@@ -32,3 +32,27 @@ class TestCalculator:
         calculator.add_number(9)
         # Then
         assert calculator.print_screen() == 9
+
+    def test_print_12_when_1_and_2_are_given(
+        self,
+    ):
+        # Given
+        calculator = Calculator()
+        # When
+        calculator.add_number(1)
+        calculator.add_number(2)
+        # Then
+        assert calculator.print_screen() == 12
+
+    def test_print_983_when_0_9_8_and_3_are_given(
+        self,
+    ):
+        # Given
+        calculator = Calculator()
+        # When
+        calculator.add_number(0)
+        calculator.add_number(9)
+        calculator.add_number(8)
+        calculator.add_number(3)
+        # Then
+        assert calculator.print_screen() == 983
