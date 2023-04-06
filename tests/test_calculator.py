@@ -22,3 +22,13 @@ class TestCalculator:
         calculator.add_number(6)
         # Then
         assert calculator.print_screen() == 6
+
+    def test_print_9_when_9_is_given(
+        self,
+    ):
+        # Given
+        calculator = Calculator()
+        # When
+        calculator.add_number(9)
+        # Then
+        assert calculator.print_screen() == 9

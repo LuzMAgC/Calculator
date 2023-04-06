@@ -1,12 +1,10 @@
 class Calculator:
-    number = False
+    number = 0
 
     def print_screen(
         self,
     ) -> int:
-        if self.number:
-            return 6
-        return 0
+        return self.number
 
     def add_number(self, number: int) -> None:
-        self.number = True
+        self.number = number
