@@ -1,5 +1,4 @@
-/nbproject
-/ruby/nbproject
+./**/pytest_cache
 .idea
 .classpath
 .vscode
