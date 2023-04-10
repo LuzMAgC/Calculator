@@ -11,4 +11,9 @@ class Calculator:
 
     def erase(self) -> None:
         str_number = f"{self.number}"
+
+        if len(str_number) <= 1:
+            self.number = 0
+            return
+
         self.number = int(str_number[:len(str_number)-1])

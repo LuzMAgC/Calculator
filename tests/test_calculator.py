@@ -82,3 +82,14 @@ class TestCalculator:
         calculator.erase()
         # Then
         assert calculator.print_screen() == 8
+
+    def test_returns_0_when_last_char_erased(
+        self,
+    ):
+        # Given
+        calculator = Calculator()
+        # When
+        calculator.add_number(8)
+        calculator.erase()
+        # Then
+        assert calculator.print_screen() == 0
