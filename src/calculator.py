@@ -8,3 +8,7 @@ class Calculator:
 
     def add_number(self, number: int) -> None:
         self.number = int(f"{self.number}{number}")
+
+    def erase(self) -> None:
+        str_number = f"{self.number}"
+        self.number = int(str_number[:len(str_number)-1])

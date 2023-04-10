@@ -56,3 +56,29 @@ class TestCalculator:
         calculator.add_number(3)
         # Then
         assert calculator.print_screen() == 983
+
+    def test_erase_last_number(
+        self,
+    ):
+        # Given
+        calculator = Calculator()
+        # When
+        calculator.add_number(8)
+        calculator.add_number(3)
+        calculator.erase()
+        # Then
+        assert calculator.print_screen() == 8
+
+    def test_erase_last_2_numbers(
+        self,
+    ):
+        # Given
+        calculator = Calculator()
+        # When
+        calculator.add_number(8)
+        calculator.add_number(3)
+        calculator.add_number(3)
+        calculator.erase()
+        calculator.erase()
+        # Then
+        assert calculator.print_screen() == 8
