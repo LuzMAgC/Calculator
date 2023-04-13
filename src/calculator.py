@@ -1,10 +1,11 @@
 class Calculator:
     number = 0
+    operator = ""
 
     def print_screen(
         self,
-    ) -> int:
-        return self.number
+    ) -> str:
+        return f"{self.number}{self.operator}"
 
     def add_number(self, number: int) -> None:
         self.number = int(f"{self.number}{number}")
@@ -20,3 +21,6 @@ class Calculator:
 
     def clear(self) -> None:
         self.number = 0
+
+    def add_operator(self, operator: str) -> None:
+        self.operator = operator
