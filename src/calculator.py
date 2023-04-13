@@ -17,3 +17,6 @@ class Calculator:
             return
 
         self.number = int(str_number[:len(str_number)-1])
+
+    def clear(self) -> None:
+        self.number = 0

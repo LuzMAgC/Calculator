@@ -93,3 +93,15 @@ class TestCalculator:
         calculator.erase()
         # Then
         assert calculator.print_screen() == 0
+
+    def test_clear_number(
+        self,
+    ):
+        # Given
+        calculator = Calculator()
+        # When
+        calculator.add_number(8)
+        calculator.add_number(8)
+        calculator.clear()
+        # Then
+        assert calculator.print_screen() == 0
