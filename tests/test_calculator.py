@@ -145,3 +145,15 @@ class TestCalculator:
         calculator.add_operator("/")
         # Then
         assert calculator.print_screen() == "0/"
+
+    def test_change_operator(
+        self,
+    ):
+        # Given
+        calculator = Calculator()
+        # When
+        calculator.add_operator("/")
+        calculator.add_operator("*")
+
+        # Then
+        assert calculator.print_screen() == "0*"
