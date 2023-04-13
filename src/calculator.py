@@ -23,4 +23,5 @@ class Calculator:
         self.number = 0
 
     def add_operator(self, operator: str) -> None:
-        self.operator = operator
+        if self.operator == "":
+            self.operator = operator

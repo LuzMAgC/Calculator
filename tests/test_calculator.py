@@ -116,3 +116,32 @@ class TestCalculator:
         # Then
         assert calculator.print_screen() == "0+"
 
+    def test_multiply_operator(
+        self,
+    ):
+        # Given
+        calculator = Calculator()
+        # When
+        calculator.add_operator("*")
+        # Then
+        assert calculator.print_screen() == "0*"
+
+    def test_subtract_operator(
+        self,
+    ):
+        # Given
+        calculator = Calculator()
+        # When
+        calculator.add_operator("-")
+        # Then
+        assert calculator.print_screen() == "0-"
+
+    def test_division_operator(
+        self,
+    ):
+        # Given
+        calculator = Calculator()
+        # When
+        calculator.add_operator("/")
+        # Then
+        assert calculator.print_screen() == "0/"
