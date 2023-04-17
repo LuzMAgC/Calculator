@@ -154,6 +154,16 @@ class TestCalculator:
         # When
         calculator.add_operator("/")
         calculator.add_operator("*")
-
         # Then
         assert calculator.print_screen() == "0*"
+
+    def test_add_2_as_second_number_when_operator_is_set(
+        self,
+    ):
+        # Given
+        calculator = Calculator()
+        # When
+        calculator.add_operator("*")
+        calculator.add_number("2")
+        # Then
+        assert calculator.print_screen() == "0*2"

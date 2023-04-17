@@ -1,14 +1,18 @@
 class Calculator:
     number = 0
     operator = ""
+    number2 = ""
 
     def print_screen(
         self,
     ) -> str:
-        return f"{self.number}{self.operator}"
+        return f"{self.number}{self.operator}{self.number2}"
 
     def add_number(self, number: int) -> None:
-        self.number = int(f"{self.number}{number}")
+        if self.operator == "":
+            self.number = int(f"{self.number}{number}")
+        else:
+            self.number2 = int(f"{self.number2}{number}")
 
     def erase(self) -> None:
         str_number = f"{self.number}"
