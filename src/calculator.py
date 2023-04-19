@@ -48,7 +48,25 @@ class Calculator:
         self.operator = operator
 
     def calculate(self) -> None:
-        self.number = self.number + self.number2
-        self.operator = ""
-        self.number2 = ""
 
+        if self.operator == "+":
+            self.number = self.number + self.number2
+            self.operator = ""
+            self.number2 = ""
+
+        elif self.operator == "*":
+            self.number = self.number * self.number2
+            self.operator = ""
+            self.number2 = ""
+
+        elif self.operator == "-":
+            self.number = self.number - self.number2
+            self.operator = ""
+            self.number2 = ""
+
+        elif self.operator == "/":
+            self.number = int(self.number / self.number2)
+            self.operator = ""
+            self.number2 = ""
+
+        return

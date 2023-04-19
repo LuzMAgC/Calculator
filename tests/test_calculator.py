@@ -245,3 +245,40 @@ class TestCalculator:
         calculator.clear()
         # Then
         assert calculator.print_screen() == "0"
+
+    def test_calculate_multiplication(
+        self,
+    ):
+        # Given
+        calculator = Calculator()
+        # When
+        calculator.add_number("9")
+        calculator.add_operator("*")
+        calculator.add_number("3")
+        calculator.calculate()
+        # Then
+        assert calculator.print_screen() == "27"
+    def test_calculate_substraction(
+        self,
+    ):
+        # Given
+        calculator = Calculator()
+        # When
+        calculator.add_number("9")
+        calculator.add_operator("-")
+        calculator.add_number("3")
+        calculator.calculate()
+        # Then
+        assert calculator.print_screen() == "6"
+    def test_calculate_division(
+        self,
+    ):
+        # Given
+        calculator = Calculator()
+        # When
+        calculator.add_number("9")
+        calculator.add_operator("/")
+        calculator.add_number("3")
+        calculator.calculate()
+        # Then
+        assert calculator.print_screen() == "3"
