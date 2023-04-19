@@ -41,6 +41,14 @@ class Calculator:
 
     def clear(self) -> None:
         self.number = 0
+        self.operator = ""
+        self.number2 = ""
 
     def add_operator(self, operator: str) -> None:
         self.operator = operator
+
+    def calculate(self) -> None:
+        self.number = self.number + self.number2
+        self.operator = ""
+        self.number2 = ""
+

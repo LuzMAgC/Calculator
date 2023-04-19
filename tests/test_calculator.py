@@ -206,3 +206,42 @@ class TestCalculator:
         calculator.erase()
         # Then
         assert calculator.print_screen() == "14"
+
+    def test_calculate_an_addition(
+        self,
+    ):
+        # Given
+        calculator = Calculator()
+        # When
+        calculator.add_number("1")
+        calculator.add_operator("+")
+        calculator.add_number("3")
+        calculator.calculate()
+        # Then
+        assert calculator.print_screen() == "4"
+
+    def test_calculate_another_addition(
+        self,
+    ):
+        # Given
+        calculator = Calculator()
+        # When
+        calculator.add_number("9")
+        calculator.add_operator("+")
+        calculator.add_number("3")
+        calculator.calculate()
+        # Then
+        assert calculator.print_screen() == "12"
+
+    def test_clear_2_numbers_and_operator(
+        self,
+    ):
+        # Given
+        calculator = Calculator()
+        # When
+        calculator.add_number("1")
+        calculator.add_operator("+")
+        calculator.add_number("3")
+        calculator.clear()
+        # Then
+        assert calculator.print_screen() == "0"
