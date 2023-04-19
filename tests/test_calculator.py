@@ -167,3 +167,42 @@ class TestCalculator:
         calculator.add_number("2")
         # Then
         assert calculator.print_screen() == "0*2"
+
+    def test_add_24_as_second_number_when_operator_is_set(
+        self,
+    ):
+        # Given
+        calculator = Calculator()
+        # When
+        calculator.add_operator("*")
+        calculator.add_number("2")
+        calculator.add_number("4")
+        # Then
+        assert calculator.print_screen() == "0*24"
+
+    def test_erase_second_number(
+        self,
+    ):
+        # Given
+        calculator = Calculator()
+        # When
+        calculator.add_operator("*")
+        calculator.add_number("2")
+        calculator.erase()
+        # Then
+        assert calculator.print_screen() == "0*"
+
+    def test_erase_second_number_and_operator(
+        self,
+    ):
+        # Given
+        calculator = Calculator()
+        # When
+        calculator.add_number("1")
+        calculator.add_number("4")
+        calculator.add_operator("*")
+        calculator.add_number("2")
+        calculator.erase()
+        calculator.erase()
+        # Then
+        assert calculator.print_screen() == "14"
