@@ -246,6 +246,21 @@ class TestCalculator:
         # Then
         assert calculator.print_screen() == "0"
 
+    def test_clear_and_then_calculate_an_addition(
+        self,
+    ):
+        # Given
+        calculator = Calculator()
+        # When
+        calculator.add_number("1")
+        calculator.clear()
+        calculator.add_number("2")
+        calculator.add_operator("+")
+        calculator.add_number("3")
+        calculator.calculate()
+        # Then
+        assert calculator.print_screen() == "5"
+
     def test_calculate_multiplication(
         self,
     ):
