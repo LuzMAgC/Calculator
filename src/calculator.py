@@ -8,11 +8,12 @@ class Calculator:
     ) -> str:
         return f"{self.number}{self.operator}{self.number2}"
 
-    def add_number(self, number: int) -> None:
+    def add_number(self, number: int):
         if self.operator == "":
             self.number = int(f"{self.number}{number}")
         else:
             self.number2 = int(f"{self.number2}{number}")
+        return self
 
     def erase(self) -> None:
 
@@ -44,8 +45,9 @@ class Calculator:
         self.operator = ""
         self.number2 = ""
 
-    def add_operator(self, operator: str) -> None:
+    def add_operator(self, operator: str):
         self.operator = operator
+        return self
 
     def calculate(self) -> None:
 
@@ -69,4 +71,4 @@ class Calculator:
             self.operator = ""
             self.number2 = ""
 
-        return
+        return self
